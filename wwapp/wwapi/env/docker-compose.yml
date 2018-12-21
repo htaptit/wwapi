@@ -1,0 +1,49 @@
+version: '3.2'
+
+services:
+  ww-app-one:
+    build: ./images
+    container_name: ww-app-one
+    tty: true
+    volumes:
+      - '..:/src'
+    links:
+      - ww-db
+  
+  ww-app-two:
+    build: ./images
+    container_name: ww-app-two
+    tty: true
+    volumes:
+      - '..:/src'
+    links:
+      - ww-db
+
+  ww-app-three:
+    build: ./images
+    container_name: ww-app-three
+    tty: true
+    volumes:
+      - '..:/src'
+    links:
+      - ww-db
+
+  ww-db:
+    build: ./database
+    container_name: ww_db
+    ports:
+      - "3306:3306"
+
+  ww-loadbalancer:
+    build: ./balance
+    container_name: ww-loadbalancer
+    tty: true
+    links:
+      - ww-app-one
+      - ww-app-two
+      - ww-app-three
+    ports:
+      - "80:80"
+
+volumes:
+  ..:

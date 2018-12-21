@@ -1,0 +1,64 @@
+version: '3.3'
+
+services:
+  ww-app-one:
+    build: ./images
+    container_name: ww-app-one
+    tty: true
+    volumes:
+      - './wwapp:/src'
+    links:
+      - ww-db
+    configs:
+      - source: my_config
+        target: /src
+  
+  ww-app-two:
+    build: ./images
+    container_name: ww-app-two
+    tty: true
+    volumes:
+      - './wwapp:/src'
+    links:
+      - ww-db
+    configs:
+      - source: my_config
+        target: /src
+
+  ww-app-three:
+    build: ./images
+    container_name: ww-app-three
+    tty: true
+    volumes:
+      - './wwapp:/src'
+    links:
+      - ww-db
+    configs:
+      - source: my_config
+        target: /src
+
+  ww-db:
+    build: ./database
+    container_name: ww_db
+    ports:
+      - "3306:3306"
+
+  ww-loadbalancer:
+    build: ./balance
+    container_name: ww-loadbalancer
+    tty: true
+    links:
+      - ww-app-one
+      - ww-app-two
+      - ww-app-three
+    ports:
+      - "80:80"
+
+volumes:
+  wwapp:
+
+configs:
+  my_config:
+    file: ./ecosystem.config.js
+  my_other_config:
+    external: true

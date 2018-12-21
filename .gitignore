@@ -1,0 +1,8 @@
+wwapp/wwapi/node_modules/
+wwapp/wwapi/package-lock.json
+wwapp/wwapi/.DS_Store
+wwapp/wwapi/._.DS_Store
+wwapp/wwapi/nohup.out
+wwapp/wwapi/npm-debug.log
+wwapp/wwapi/server/.env
+wwapp/wwapi/server/._.DS_Store

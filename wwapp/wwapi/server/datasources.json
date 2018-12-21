@@ -1,0 +1,32 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "ww_db": {
+    "host": "mysql",
+    "port": 3306,
+    "url": "mysql://root:root@mysql/ww_db",
+    "database": "ww_db",
+    "password": "root",
+    "name": "ww_db",
+    "user": "root",
+    "connector": "mysql"
+  },
+  "emailDs": {
+    "name": "emailDs",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "port": 465,
+        "secure": true,
+        "auth": {
+          "user": "htaptit@gmail.com",
+          "pass": "Yentrinh2210"
+        }
+      }
+    ]
+  }
+}
