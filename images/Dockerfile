@@ -8,4 +8,4 @@ WORKDIR /src
 
 EXPOSE 3000
 
-CMD ["pm2", "start", "wwapi", "--", "start"]
+# CMD ["pm2", "start", "wwapi", "--", "start"]
