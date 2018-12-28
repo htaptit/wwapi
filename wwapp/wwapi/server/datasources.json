@@ -4,9 +4,9 @@
     "connector": "memory"
   },
   "ww_db": {
-    "host": "mysql",
+    "host": "ww-db",
     "port": 3306,
-    "url": "mysql://root:root@mysql/ww_db",
+    "url": "ww-db://root:root@ww-db/ww_db",
     "database": "ww_db",
     "password": "root",
     "name": "ww_db",

@@ -39,8 +39,8 @@ services:
 
   ww-db:
     build: ./database
-    container_name: ww_db
-    hosname: mysql
+    container_name: ww-db
+    hostname: ww-db
     ports:
       - "3306:3306"
 
