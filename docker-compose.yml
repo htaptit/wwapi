@@ -6,7 +6,7 @@ services:
     container_name: ww-app-one
     tty: true
     volumes:
-      - './wwapp:/src'
+      - './wwapp/wwapi:/src'
     links:
       - ww-db
     configs:
@@ -18,7 +18,7 @@ services:
     container_name: ww-app-two
     tty: true
     volumes:
-      - './wwapp:/src'
+      - './wwapp/wwapi:/src'
     links:
       - ww-db
     configs:
@@ -30,7 +30,7 @@ services:
     container_name: ww-app-three
     tty: true
     volumes:
-      - './wwapp:/src'
+      - './wwapp/wwapi:/src'
     links:
       - ww-db
     configs:

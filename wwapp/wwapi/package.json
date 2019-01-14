@@ -7,7 +7,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "pm2 start ecosystem.config.js --env production",
+    "start": "pm2 start ecosystem.config.js --watch --env production",
     "posttest": "npm run lint"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "loopback-connector-mysql": "^5.3.1",
     "newsapi": "^2.4.0",
     "node-cron": "^2.0.1",
+    "pm2": "^3.2.8",
     "serve-favicon": "^2.0.1",
     "sleep": "^5.2.3",
     "strong-error-handler": "^3.0.0",
