@@ -39,9 +39,9 @@
               > `circleci local execute --job check_convention_php`
             - Test : 
               > `circleci local execute --job test`
-     - #### Notice: When an error occurs<a name='notice'>
+    - #### Notice: When an error occurs<a name='notice'>
         - Change the content of the file `~/.circleci/build_agent_settings.json` to :   
         
-          ``` {"LatestSha256":"sha256:f340abec0d267609a4558a0ff74538227745ef350ffb664e9dbb39b1dfc20100"} ```
-         
+            ``` {"LatestSha256":"sha256:f340abec0d267609a4558a0ff74538227745ef350ffb664e9dbb39b1dfc20100"} ```
+            
         - Then run the command again
